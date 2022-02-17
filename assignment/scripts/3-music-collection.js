@@ -20,6 +20,7 @@ console.log('Adding Massive Attack, Protection, 1995 to the collection:', addToC
 console.log('Adding Nine Inch Nails, The Downward Spiral, 1994 to the collection:', addToCollection('The Downward Spiral', 'Nine Inch Nails', 1994));
 console.log('Adding The Chemical Brothers, Dig Your Own Hole, 1997 to the collection:', addToCollection('Dig Your Own Hole', 'The Chemical Brothers', 1997));
 console.log('Adding Roni Size, New Forms, 1997 to the collection:', addToCollection('Roni Size', 'New Forms', 1997));
+console.log('Adding Megadeth, Rust in Peace, 1990 to the collection:', addToCollection('Megadeth', 'Rust in Peace', 1990));
 console.log(collection);
 
 function showCollection(array){
@@ -30,3 +31,16 @@ function showCollection(array){
 }
 
 showCollection(collection);
+
+function findByArtist(artist){
+  let newArray = [];
+  for(i=0; i<collection.length; i++){
+    if(collection[i].artist === artist){
+      newArray.push(collection[i]);
+    }
+  }
+  return newArray;
+}
+
+console.log('Looking for artist Massive Attack in the collection:', findByArtist('Massive Attack'));
+console.log('Looking for artist Portishead in the collection:', findByArtist('Portishead'));
