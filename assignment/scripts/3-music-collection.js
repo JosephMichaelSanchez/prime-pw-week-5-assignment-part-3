@@ -75,8 +75,9 @@ function addToCollection(title, artist, yearPublished, tracks){
     title: 'title',
     artist: 'artist',
     yearPublished: 'yearPublished',
-    tracks: 'tracks'
-  }
+    tracks: []
+
+  };
 
   record.title = title;
   record.artist = artist;
@@ -98,10 +99,10 @@ function showCollection(array){
   console.log('Showing the collection...');
   console.log(`There are ${array.length} records in the collection:`);
   for(i=0; i<array.length; i++){
-    console.log(`${array[i].title} by ${array[i].artist} published in ${array[i].yearPublished}`);
+    console.log(`${array[i].title} by ${array[i].artist} published in ${array[i].yearPublished}:`);
+    console.log(array[i].tracks);
     }
 }
-
 showCollection(collection);
 
 function findByArtist(artist){
